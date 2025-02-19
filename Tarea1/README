@@ -1,0 +1,41 @@
+API de noticias
+
+Descripción
+Este proyecto consiste en una API desarrollada con Node y Express que permite obtener noticias en formato JSON por medio de una API Key de NewsAPI.
+La API proporciona EndPoints para obtener fuentes de noticias.
+
+Tecnologias
+Se utilizaron las siguientes librerias y tecnologias:
+Node.js, Express.js, Axios (peticiones HTTP a NewsAPI), Dotenv, Cors , Nodemon.
+
+Dependencias de Terceros
+
+Se utilizaron las librerias mencionadas usando npm:
+"npm install express axios dotenv cors nodemon"
+
+
+Instrucciones a seguir:
+
+1. Instalar las dependencias necesarias: "npm install express axios dotenv cors nodemon".
+2. En caso de que se requiera usar otra API Key, modificarla en el archivo .env (Solo en caso de que sea necesario).
+3. Ejecutar el script de dev con el comando: npm run dev.
+4. Abrir y ejecutar el puerto 3000 utilizando los endpoins disponibles.
+
+La API contiene 3 EndPoints: 
+- /api/news/sources
+- /api/news/top-headlines
+- /api/news/everything
+
+Estos son algunos ejemplos de uso, en el orden respectivo:
+- http://localhost:3000/api/news/sources
+- http://localhost:3000/api/news/top-headlines?country=us
+- http://localhost:3000/api/news/everything?q=bitcoin
+
+Scrips disponibles
+
+npm start: Ejecuta el servidor en modo normal
+npm run dev: Ejecuta el servidor con Nodemon para desarrollo
+
+API Key
+
+La API key esta almacenada en en el archivo .env

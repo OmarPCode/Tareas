@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subir Imagen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .form-container {
+            margin-top: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .error {
+            color: red;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Subir Nueva Imagen</h1>
+    
+    {{#if error}}
+        <div class="error">{{error}}</div>
+    {{/if}}
+    
+    <div class="form-container">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div>
+                <label>Selecciona una imagen (JPG/PNG):</label><br>
+                <input type="file" name="image" accept="image/jpeg, image/png" required>
+            </div>
+            <div style="margin-top: 20px;">
+                <button type="submit" class="btn">Subir Imagen</button>
+            </div>
+        </form>
+    </div>
+    
+    <div style="margin-top: 30px;">
+        <a href="/gallery" class="btn">Ver Galería</a>
+        <a href="/" class="btn">Inicio</a>
+    </div>
+</body>
+</html>
